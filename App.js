@@ -1,20 +1,62 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { View, Text, Image } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+// class App extends Component {
+//   render() {
+
+//     let nome = 'Eu';
+
+//     return (
+//       <View>
+//         <Text>My first App</Text>
+//         <Text style={{ color: '#FF0000', fontSize: 25, margin: 15 }}>
+//           Sujeito Programador
+//         </Text>
+
+//         <Text style={{ fontSize: 30 }}>{nome}</Text>
+
+//         <Jobs largura={200} altura={200} fulano="Steaven Trabalho" />
+
+//       </View>
+//     );
+//   }
+// }
+
+// class Jobs extends Component {
+//   render() {
+
+//     let img = 'https://sujeitoprogramador.com/steve.png';
+
+//     return (
+//       <View>
+//         <Image
+//           source={{ uri: img }}
+//           style={{ width: this.props.largura, height: this.props.altura }}
+//         />
+//         <Text> {this.props.fulano} </Text>
+//       </View>
+//     );
+//   }
+// }
+
+// props = Estáticas
+// states = Váriaveis
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      nome: 'Gil'
+      
+    };
+  }
+  render() {
+    return (
+      <View>
+        <Text>My first App</Text>
+      </View>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
